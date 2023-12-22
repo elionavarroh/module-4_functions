@@ -9,18 +9,18 @@ const result = document.getElementById("result");
 //FUNCIONES
 function next () {
     mivariable = mivariable + 1;
-    result!.innerText = String(mivariable)
+    result!.innerText = String(mivariable).padStart(2, "00");
 };
 
 function back () {
     if (mivariable === 0) return;
     mivariable = mivariable - 1;
-    result!.innerText = String(mivariable)
+    result!.innerText = String(mivariable).padStart(2, "00");
 };
 
 function reset () {
     mivariable = 0;
-    result!.innerText = String(mivariable)
+    result!.innerText = String(mivariable).padStart(2, "00");
 };
 
 //EVENTS
