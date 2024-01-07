@@ -24,21 +24,16 @@ function reset () {
 };
 
 //EVENTS
+const exist = result !== null && result !== undefined && result instanceof HTMLHeadingElement;
 
-if (botonNext !== null && botonNext !== undefined && botonNext instanceof HTMLButtonElement) {
+if (exist && botonNext !== null && botonNext !== undefined && botonNext instanceof HTMLButtonElement) {
     botonNext.addEventListener("click", next)
 };
 
-if (botonBack !== null && botonBack !== undefined && botonBack instanceof HTMLButtonElement) {
+if (exist && botonBack !== null && botonBack !== undefined && botonBack instanceof HTMLButtonElement) {
     botonBack.addEventListener("click", back)
 };
 
-if (botonReset !== null && botonReset !== undefined && botonReset instanceof HTMLButtonElement) {
+if (exist && botonReset !== null && botonReset !== undefined && botonReset instanceof HTMLButtonElement) {
     botonReset.addEventListener("click", reset)
 };
-
-
-
-
-
-
