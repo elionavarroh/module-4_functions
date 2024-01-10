@@ -23,17 +23,30 @@ function reset () {
     result!.innerText = String(mivariable).padStart(2, "00");
 };
 
-//EVENTS
-const exist = result !== null && result !== undefined && result instanceof HTMLHeadingElement;
+//RESULT
 
-if (exist && botonNext !== null && botonNext !== undefined && botonNext instanceof HTMLButtonElement) {
+if (result !== null && botonNext !== undefined && botonNext instanceof HTMLHeadingElement) {
     botonNext.addEventListener("click", next)
 };
 
-if (exist && botonBack !== null && botonBack !== undefined && botonBack instanceof HTMLButtonElement) {
+if (result !== null && botonBack !== undefined && botonBack instanceof HTMLHeadingElement) {
     botonBack.addEventListener("click", back)
 };
 
-if (exist && botonReset !== null && botonReset !== undefined && botonReset instanceof HTMLButtonElement) {
+if (result !== null && botonReset !== undefined && botonReset instanceof HTMLHeadingElement) {
+    botonReset.addEventListener("click", reset)
+};
+
+//EVENTS
+
+if (botonNext !== null && botonNext !== undefined && botonNext instanceof HTMLButtonElement) {
+    botonNext.addEventListener("click", next)
+};
+
+if (botonBack !== null && botonBack !== undefined && botonBack instanceof HTMLButtonElement) {
+    botonBack.addEventListener("click", back)
+};
+
+if (botonReset !== null && botonReset !== undefined && botonReset instanceof HTMLButtonElement) {
     botonReset.addEventListener("click", reset)
 };
